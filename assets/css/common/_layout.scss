@@ -1,13 +1,11 @@
 /* 공통 레이아웃 */
 body{
-    overflow: hidden;
+    
 }
 .wrap{
     width:100%;
     @include flexbox(row, flex-start,flex-start);
     background-color: #fff;
-    height:100%;
-    min-height:100vh;
 }
 .inner{
     width:100%;
@@ -25,16 +23,17 @@ body{
     background-color:$blue02;
 }
 .container{
-    max-height:100vh;
-    overflow: auto;
-    padding:2.8rem 0 5.8rem 0;
+    min-height:100vh;
+    padding:2.8rem 0 0rem 0;
 }
 .item-wrap{
     @include flexbox(row, flex-start,flex-start);
     .item-box{
         background-color:$graybg;
-        min-height:calc(100vh - 17rem);
+        min-height:calc(100vh - 19rem);
+        max-height:calc(100vh - 19rem);
         flex: 2;
+        overflow-y: auto;
         &.pad-tb-20{
             padding-top:2rem;
             padding-bottom:2rem;
@@ -52,18 +51,7 @@ body{
         }
     }   
 }
-.item-text-box{
-    @include flexbox(row, flex-start,center);
-    height:7rem;
-    background-color:$white;
-    padding:0 2.4rem; 
-    margin-bottom:2.8rem;
-    p{
-        color:$black0;
-        font-size:1.8rem;
-        font-weight: 700;
-    }
-}
+
 .item-title{
     padding:1.6rem 0;
     h3{
@@ -83,6 +71,7 @@ body{
             border-radius:0.4rem;
             -webkit-transition: all 0.25s ease-in-out;
             transition: all 0.25s ease-in-out;
+            
             &:last-child{
                 margin-bottom:0;
             }
@@ -91,17 +80,46 @@ body{
                 width:100%;
                 height:100%;
                 padding:0 1.2rem;
-                background-color:#fff;
+                background-color:$white;
                 text-align: center;
                 -webkit-transition: all 0.25s ease-in-out;
                 transition: all 0.25s ease-in-out;
             }
             &:hover,&.on{
                 a{
-                    color:#fff;
+                    color:$white;
                     background-color:#197EC1;
+                    span{
+                        color:$white;
+                    };
                 }
             }
+            &.user-side{
+                a{
+                    justify-content: flex-start;
+                    span{
+                        &.name{
+                            width:7.4rem;
+                            margin-right:1.2rem;
+                            font-weight: 400;
+                        }
+                        &.email{
+                            color:#757575;
+                        }
+                    }
+                }
+                &:hover,&.on{
+                    color:$white;
+                    background-color:#197EC1;
+                    span{
+                        color:$white;
+                        &.email{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        
         }
     }
 }
@@ -134,7 +152,7 @@ header{
         @include flexbox(row, space-between,center);
     }
     .head-search-wrap{ 
-        width:40rem;
+        min-width:40rem;
         height:4.5rem;
         border:1px solid $mainColor; 
         border-radius:2.5rem;
@@ -153,18 +171,27 @@ header{
                     color:$mainColor;
                 }
             }
+            &.select{
+                @include flexbox(row, space-between,center);
+                .btn{
+                    margin-right:1rem;
+                }
+            }
         }
-        .search-select{
-            max-height: 3.6rem;
-            font-size: 1.4rem;
-            padding: 0.8rem 1.2rem;
-            border-radius: .4rem;
-            background: $white;
-            border:0;
-            option[value=""][disabled] {display: none;}
-            &:disabled{
-                border-color: $gray01;
-                background: $gray03;
+        .dropdown{
+            border-left:1px solid $mainColor;
+            .dropdown-toggle{
+                max-height: 2rem;
+                font-size: 1.4rem;
+                padding-left:1rem;
+                border-radius: 0;
+                background: $white;
+                border:0;
+                color:$mainColor;
+                @include background(icon, head_search_select_icon, svg, no-repeat, contain, center, right );
+            }
+            &:focus{
+                outline: 0;
             }
         }
     }

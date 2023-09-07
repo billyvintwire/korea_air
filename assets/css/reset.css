@@ -120,7 +120,11 @@ input::-moz-placeholder { /* Mozilla Firefox 19+ */
 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
 	color:#B1B1B1 !important;
 }
-
+select{
+	-webkit-appearance:none; /* 크롬 화살표 없애기 */
+    -moz-appearance:none; /* 파이어폭스 화살표 없애기 */
+    appearance:none /* 화살표 없애기 */
+}
 *::-webkit-scrollbar {width: 3px;height: 3px;}
 *::-webkit-scrollbar-thumb {background: #0063A5;border-radius: 3px;}
 *::-webkit-scrollbar-track {background: #ccc;border-radius: 3px;}

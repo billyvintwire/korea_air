@@ -4,3 +4,30 @@
 /**************************************************************
 Role Management
 *****************************************************************/
+.item-text-box{
+    
+}
+.user-infomation{
+    @include flexbox(row, flex-start,flex-start);
+    min-height:7rem;
+    background-color:$white;
+    padding:0 2.4rem; 
+    margin-bottom:2.8rem;
+    &.text-box{
+        @include flexbox(row, flex-start,center);
+        p{
+            color:$black0;
+            font-size:1.8rem;
+            font-weight: 700;
+        }
+    }
+    &>div{
+       &:nth-child(1){
+            width:17.4rem;
+            border-right:1px soild $gray02;
+        }
+       &:nth-child(2){
+            
+       } 
+    }
+}

@@ -6,21 +6,18 @@
     <title>대한항공</title>
     <!-- jquery cdn -->
     <script src="../assets/js/jquery-3.7.0.min.js"></script>
-    <!-- datepicker -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
-    <!-- timepicker -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- daterangepicker -->
+    <script src="../../../assets/js/plugin/daterangepicker/moment.min.js"></script>
+    <script src="../../../assets/js/plugin/daterangepicker/daterangepicker.js"></script>
+    <link rel="stylesheet" href="../../../assets/js/plugin/daterangepicker/daterangepicker.css">
     <!-- swiper slide -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../../../assets/js/plugin/swiper/swiper-bundle.min.css" />
+    <script src="../../../assets/js/plugin/swiper/swiper-bundle.min.js"></script>
     <!-- 로컬소스 -->
-    <link rel="stylesheet" href="../assets/css/reset.css" />
-    <link rel="stylesheet" href="../assets/css/font.css" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <script src="../assets/js/common.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../../assets/css/font.css" />
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <script src="../../../assets/js/common.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -41,12 +38,10 @@
                     <div class="input-wrap head-search">
                         <input type="search" placeholder="Search">
                     </div>
-                    <div class="input-wrap">
+                    <div class="input-wrap select">
                         <button class="btn btn-icon btn-head-search" type="submit"></button>
-                    </div>
-                    <div class="input-wrap">
                         <div class="dropdown" rel="dropdown">
-                            <a href="javascript:void(0)" class="dropdown-toggle">선택</a>
+                            <span href="javascript:void(0)" class="dropdown-toggle ">선택</span>
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:void(0)">test01</a></li>
                                 <li><a href="javascript:void(0)">test02</a></li>
@@ -63,9 +58,10 @@
         <!-- content container -->
         <div class="container">
             <div class="inner">
+
                 <div class="content-title-wrap">
                     <h2>
-                        Role Management
+                        User Management
                     </h2>
                     <ul class="location">
                         <li>
@@ -79,8 +75,10 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div class="item-wrap">
                     <div class="item-box item-box-side">
+
                         <div class="search-wrap">                                
                             <div class="input-wrap search">
                                 <input type="search" placeholder="Search">
@@ -88,89 +86,72 @@
                             </div>
                             <button class="btn btn-icon search-more-btn"></button>
                         </div>
+
                         <div class="side-list-wrap"> 
                             <ul>
-                                <li class="on">
+                                <li class="on user-side">
                                     <a href="javascript:void:(0)">
-                                        <span>
-                                            Operation Manager
+                                        <span class="name">
+                                            류창현
+                                        </span>
+                                        <span class="email">
+                                            chrhyoo@koreanair.com
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="user-side">
                                     <a href="javascript:void:(0)">
-                                        <span>
-                                            AC SKD
+                                        <span class="name">
+                                            류창현
+                                        </span>
+                                        <span class="email">
+                                            chrhyoo@koreanair.com
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="user-side">
                                     <a href="javascript:void:(0)">
-                                        <span>
-                                            Global ACS
+                                        <span class="name">
+                                            류창현
+                                        </span>
+                                        <span class="email">
+                                            chrhyoo@koreanair.com
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="user-side">
                                     <a href="javascript:void:(0)">
-                                        <span>
-                                            SI Support
+                                        <span class="name">
+                                            류창현
+                                        </span>
+                                        <span class="email">
+                                            chrhyoo@koreanair.com
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="user-side">
                                     <a href="javascript:void:(0)">
-                                        <span>
-                                            PRM Support
+                                        <span class="name">
+                                            류창현
+                                        </span>
+                                        <span class="email">
+                                            chrhyoo@koreanair.com
                                         </span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="user-side">
                                     <a href="javascript:void:(0)">
-                                        <span>
-                                            Cockpit Crew Tracking
+                                        <span class="name">
+                                            류창현
+                                        </span>
+                                        <span class="email">
+                                            chrhyoo@koreanair.com
                                         </span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:void:(0)">
-                                        <span>
-                                            Cabin Crew Tracking
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void:(0)">
-                                        <span>
-                                            Maintenance Coordinator
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void:(0)">
-                                        <span>
-                                            Flight Manager
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void:(0)">
-                                        <span>
-                                            Flight Control
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void:(0)">
-                                        <span>
-                                            Flight Operation Manager
-                                        </span>
-                                    </a>
-                                </li>
-                                
-                                
                             </ul>
                         </div>
+
                     </div>
                     <div class="item-box item-box-type01">
                         <div class="item-con">
@@ -179,14 +160,37 @@
                                     User Infomation
                                 </h3>
                             </div>
-                            <div class="item-text-box">
-                                <p>Cargo SVC Coordinator</p>
-                            </div>
-                            <div class="item-text-box">
-                                <div class="input-wrap col-12">
-                                    <input type="text" class="col-12" placeholder="Cargo SVC Coordinator">
+                            <!-- user-infomation -->
+                            <div class="user-infomation">
+                                <div>
+                                    <h3>김양원</h3>
+                                    <h4>KIM YANG WON<h4>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <p>Email.</p>
+                                            <span>
+                                                Yangwonkim@koreanair.com
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <p>Department.</p>
+                                            <span>
+                                                SELXW
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <p>Default Role.</p>
+                                            <span>
+                                                Operation Manager
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                            <!-- // user-infomation -->
+                            
                         </div>
                         <div class="item-con">
                             <div class="item-title">
@@ -198,14 +202,6 @@
                                 <div class="board-list">
                                     <table class="table">
                                         <caption>롤 권한</caption>
-                                        <!--
-                                        <colgroup>
-                                            <col width="20%">
-                                            <col width="auto">
-                                            <col width="10%">
-                                            <col width="10%">
-                                        </colgroup>
-                                        -->
                                         <thead>
                                             <tr>
                                                 <th class="col-2">
@@ -282,7 +278,7 @@
                                             <tr>
                                                 <td class="col-2">
                                                     <span>
-                                                        102
+                                                        103
                                                     </span>
                                                 </td>
                                                 <td class="col-auto">
@@ -306,7 +302,7 @@
                                             <tr>
                                                 <td class="col-2">
                                                     <span>
-                                                        102
+                                                        104
                                                     </span>
                                                 </td>
                                                 <td class="col-auto">
@@ -316,21 +312,21 @@
                                                 </td>
                                                 <td class="col-3">
                                                     <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList01-03" disabled checked>
-                                                        <label for="checkList01-03"></label>
+                                                        <input type="checkbox" id="checkList01-04" >
+                                                        <label for="checkList01-04"></label>
                                                     </div>
                                                 </td>
                                                 <td class="col-3">
                                                     <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList02-03" disabled>
-                                                        <label for="checkList02-03"></label>
+                                                        <input type="checkbox" id="checkList02-04" >
+                                                        <label for="checkList02-04"></label>
                                                     </div>
                                                 </td>
                                             </tr> 
                                             <tr>
                                                 <td class="col-2">
                                                     <span>
-                                                        102
+                                                        105
                                                     </span>
                                                 </td>
                                                 <td class="col-auto">
@@ -340,113 +336,18 @@
                                                 </td>
                                                 <td class="col-3">
                                                     <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList01-03" disabled checked>
-                                                        <label for="checkList01-03"></label>
+                                                        <input type="checkbox" id="checkList01-05" >
+                                                        <label for="checkList01-05"></label>
                                                     </div>
                                                 </td>
                                                 <td class="col-3">
                                                     <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList02-03" disabled>
-                                                        <label for="checkList02-03"></label>
+                                                        <input type="checkbox" id="checkList02-05" >
+                                                        <label for="checkList02-05"></label>
                                                     </div>
                                                 </td>
                                             </tr> 
-                                            <tr>
-                                                <td class="col-2">
-                                                    <span>
-                                                        102
-                                                    </span>
-                                                </td>
-                                                <td class="col-auto">
-                                                    <span title="값이 길어질 시 보이는 툴팁">
-                                                        Global ACS
-                                                    </span>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList01-03" disabled checked>
-                                                        <label for="checkList01-03"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList02-03" disabled>
-                                                        <label for="checkList02-03"></label>
-                                                    </div>
-                                                </td>
-                                            </tr> 
-                                            <tr>
-                                                <td class="col-2">
-                                                    <span>
-                                                        102
-                                                    </span>
-                                                </td>
-                                                <td class="col-auto">
-                                                    <span title="값이 길어질 시 보이는 툴팁">
-                                                        Global ACS
-                                                    </span>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList01-03" disabled checked>
-                                                        <label for="checkList01-03"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList02-03" disabled>
-                                                        <label for="checkList02-03"></label>
-                                                    </div>
-                                                </td>
-                                            </tr> 
-                                            <tr>
-                                                <td class="col-2">
-                                                    <span>
-                                                        102
-                                                    </span>
-                                                </td>
-                                                <td class="col-auto">
-                                                    <span title="값이 길어질 시 보이는 툴팁">
-                                                        Global ACS
-                                                    </span>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList01-03" disabled checked>
-                                                        <label for="checkList01-03"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList02-03" disabled>
-                                                        <label for="checkList02-03"></label>
-                                                    </div>
-                                                </td>
-                                            </tr> 
-                                            <tr>
-                                                <td class="col-2">
-                                                    <span>
-                                                        102
-                                                    </span>
-                                                </td>
-                                                <td class="col-auto">
-                                                    <span title="값이 길어질 시 보이는 툴팁">
-                                                        Global ACS
-                                                    </span>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList01-03" disabled checked>
-                                                        <label for="checkList01-03"></label>
-                                                    </div>
-                                                </td>
-                                                <td class="col-3">
-                                                    <div class="input-wrap checkbox">
-                                                        <input type="checkbox" id="checkList02-03" disabled>
-                                                        <label for="checkList02-03"></label>
-                                                    </div>
-                                                </td>
-                                            </tr> 
+                                          
                                         </tbody>
                                     </table>
                                 </div>
@@ -474,10 +375,12 @@
         <div class="inner">
             <div class="chat-top">
                 <p>
+                    <!--
                     <b>
                         Irops in Progress
                     </b>
                     <span class="text-red">1</span> / 2
+                    -->
                 </p>
             </div>
             <div class="chat-con">
