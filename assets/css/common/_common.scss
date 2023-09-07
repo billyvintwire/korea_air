@@ -493,14 +493,28 @@ h5{font-weight: 400;font-size:1.2rem;line-height:1.4rem}
         input[type="checkbox"]{
             &:disabled{
                 + label{
+                    cursor:default;
                     &::after{
-                        @include background(icon, check_disabled_icon, png, no-repeat, 100%, center, center);
+                        cursor:default;
+                        background:$gray03;
+                        opacity: 1;
+                        pointer-events: none;
                     }
                 }
             }
             &:checked{
                 + label{
                     &::after{opacity: 1;}
+                }
+                &:disabled{
+                    + label{
+                        cursor:default;
+                        &::after{
+                            cursor:default;
+                            pointer-events: none;
+                            @include background(icon, check_disabled_icon, png, no-repeat, 100%, center, center);
+                        }
+                    }
                 }
             }
             + label{
@@ -767,10 +781,10 @@ button,
                 background-color:$graybg;
                 padding-bottom:1.1rem;
                 span{
-                    display:block;
-                    padding:0.6rem 0;
+                    @include flexbox(row, center, center);
+
                     background-color: $blue02;
-                    width:100%;height:100%;
+                    width:100%;height:3rem;
                     color:$black;
                     font-size:1.4rem;
                     font-weight: 400;
