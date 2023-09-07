@@ -1,0 +1,1153 @@
+@import "./common/_common";
+@import "./common/_layout";
+@import "./common/_responsive";
+
+#wrapper{
+    .emphasis-btn{
+        width: 100%;
+        margin-top: 4.8rem;
+        max-height: 4rem;
+        display: block;
+        padding: 1.2rem 1rem;
+        border-radius: .4rem;
+        background: $gray04;
+        color: $white;
+        border-color: $gray04;
+        font-size: 1.4rem;
+        font-weight: bold;
+        &:hover, &.on{
+            background: $mainColor;
+            border-color: $mainColor;
+        }
+        @include notebook{
+            margin-top: 2rem;
+            max-height: 4.8rem;
+            font-size: 1.6rem;
+            padding: 1.4rem 1rem;
+        }
+        + .move-links{
+            text-decoration: underline;
+            margin-top: 1.4rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+            @include flexbox(row, center, flex-start);
+            @include notebook{
+                margin-top: 3.6rem;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    #wrap{
+        // 로그인페이지
+        &.login{
+            height: 100vh;
+            @include flexbox(row, flex-start, flex-start);
+            @include notebook{
+                gap: 5.4rem;
+                flex-direction: column;
+            }
+            > div{
+                position: relative;
+                height: 100%;
+                @include notebook{height: auto;}
+            }
+            .login-bg{
+                width: 65%;
+                border-radius: 0 10% 0 0;
+                @include background(login, login_bg, png, no-repeat, cover, top, left);
+                @include notebook{
+                    width: 100%;
+                    min-height: 22rem;
+                    border-radius: 0 0 10% 0;
+                    @include background(login, login_mb_bg, png, no-repeat, cover, top, left);
+                }
+            }
+            .login-wrap{
+                width: 35%;
+                @include notebook{width: 100%;}
+                .login-cont{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: calc(100% - 6rem);
+                    max-width: 36rem;
+                    @include notebook{
+                        position: static;
+                        transform: translate(0);
+                        max-width: 100%;
+                        margin: 0 auto;
+                    }
+                    .logo{
+                        width: 100%;
+                        max-width: 27rem;
+                        min-height: 3.4rem;
+                        margin: 0 auto;
+                        text-indent: -9999em;
+                        @include background(login, login_logo, png, no-repeat, contain, center, center);
+                        @include notebook{
+                            max-width: 12rem;
+                            min-height: 7rem;
+                            @include background(login, login_logo_mb, png, no-repeat, contain, center, center);
+                        }
+                    }
+                    .login-info{
+                        margin-top: 6.4rem;
+                        @include notebook{margin-top: 5.4rem;}
+                        > strong{
+                            font-weight: bold;
+                            @include notebook{font-size: 1.8rem;}
+                            + .input-list{
+                                margin-top: 3.2rem;
+                                gap: 2.4rem;
+                                @include notebook{
+                                    margin-top: 2.4rem;
+                                    gap: 1.8rem;
+                                }
+                                > li{
+                                    .input-wrap{
+                                        input{
+                                            width: 100%;
+                                            max-height: 4rem;
+                                            padding: 1rem 1.2rem;
+                                            &:focus{
+                                                ~ .focus-border{
+                                                    &::after, &::before{width: 100%;}
+                                                    > i{
+                                                        &::after, &::before{height: 100%;}
+                                                    }
+                                                }
+                                            }
+                                            ~ .focus-border{
+                                                &::after, &::before{
+                                                    width: 0;
+                                                    height: 2px;
+                                                    @include foucsBorder;
+                                                }
+                                                &::after, i::after{top: 0;left: 0;}
+                                                &::before, i::before{bottom: 0;right: 0;}
+                                                > i{
+                                                    &::after, &::before{
+                                                        width: 2px;
+                                                        height: 0;
+                                                        @include foucsBorder;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .copyright{
+                    width: calc(100% - 6rem);
+                    max-width: 36rem;
+                    text-align: center;
+                    line-height: 1.2;
+                    font-size: 1.2rem;
+                    color: $gray02;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 8.4rem;
+                    transform: translateX(-50%);
+                    @include notebook{display: none;}
+                }
+            }
+        }
+        // 비밀번호 찾기
+        &.find-pw{
+            height: 100vh;
+            @include background(login, find_pw_bg, png, no-repeat, auto 100%, top, right -60rem);
+            @include notebook{background: none;}
+            .pw-wrap{
+                width: calc(100% - 4rem);
+                max-width: 51.4rem;
+                padding: 8.4rem 7.7rem;
+                background: $white;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 29px 0px;
+                border-radius: .4rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include border(1px, $gray04);
+                @include notebook{
+                    padding: 4.4rem 1.4rem;
+                }
+                .logo{
+                    width: calc(100% - 4rem);
+                    max-width: 27rem;
+                    height: 3.4rem;
+                    text-indent: -9999em;
+                    margin: 0 auto;
+                    @include background(login, login_logo, png, no-repeat, contain, center, center);
+                    @include notebook{
+                        max-width: 12rem;
+                        min-height: 7rem;
+                        @include background(login, login_logo_mb, png, no-repeat, contain, center, center);
+                    }
+                }
+                .pw-info{
+                    margin-top: 4.8rem;
+                    @include mobile{margin-top: 4.4rem;}
+                    .tit{
+                        > strong{
+                            font-size: 1.8rem;
+                            font-weight: bold;
+                            display: block;
+                            margin-bottom: 1.6rem;
+                            + p{
+                                font-size: 1.4rem;
+                                line-height: 1.4;
+                                span{
+                                    font-weight: bold;
+                                    display: block;
+                                }
+                            }
+                        }
+                        + .input-list{
+                            margin-top: 3.2rem;
+                            > li{
+                                .input-cont{
+                                    width: 100%;
+                                    .input-wrap{
+                                        width: calc(50% - 1.2rem);
+                                        input{width: 100%;}
+                                        select{width: 100%;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    + .copyright{
+                        margin-top: 6.4rem;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        color: $gray02;
+                        text-align: center; 
+                        @include notebook{display: none;}
+                    }
+                }
+            }
+        }
+        // 스타일가이드
+        &.style-guide{
+            background: $white;
+            @include border(1px, #333);
+            .wrap-inner{
+                padding: 2.4rem;
+            }
+            .con-box{
+                > h3{
+                    width: 100%;
+                    display: block;
+                    padding: 1rem;
+                    color: $white;
+                    font-size: 4rem;
+                    font-weight: bold;
+                    text-align: center;
+                    background: $black;
+                }
+                > div{
+                    padding: 2rem;
+                    margin-top: 4rem;
+                    border: 1px solid #000;
+                    > strong{
+                        display: block;
+                        font-weight: bold;
+                        margin-bottom: 1.6rem;
+                    }
+                    .cont-inner{
+                        gap: 2rem;
+                        @include flexbox(column, flex-start, flex-start);
+                    }
+                }
+                .tab-area{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1rem;
+                    > li{
+                        width: 100%;
+                        > a{
+                            width: 100%;
+                            padding: 1.6rem 0;
+                            font-weight: bold;
+                            border-radius: 3rem;
+                            text-align: center;
+                            display: block;
+                            background: $black;  
+                            color: $white;
+                        }
+                    }
+                }
+                .type-list{
+                    @include flexbox(row, flex-start, flex-start);
+                    flex-wrap: wrap;
+                    gap: 3rem 2.4rem;
+                    &:not(:last-child){margin-bottom: 2.4rem;}
+                    > li{
+                        @include flexbox(row, flex-start, flex-start);
+                        gap: 1rem;
+                        margin-top: 0;
+                        &.column-type{flex-direction: column;}
+                        span{
+                            font-size: 1.4rem;
+                            display: block;
+                            margin-bottom: 1rem;
+                        }
+                        > button{
+                            &:not(:first-child){margin-top: 1rem;}
+                        }
+                        > div{
+                            // &:not(:first-child){margin-top: 1rem;}
+                            &.flex-wrap{gap: 1.2rem;}
+                        }
+                    }
+                }
+            }
+        }
+        // 메인페이지
+        &.main{
+            section{
+                position: relative;
+                &:not(.notice, .visual){
+                    margin-top: 12rem;
+                    @include notebook{margin-top: 8rem;}
+                }
+                &.notice{
+                    padding: 1.2rem 0;
+                    background: $mainColor;
+                    *{color: $white;}
+                    > .con-box{
+                        gap: 2.4rem;
+                        @include flexbox(row, flex-start, center);
+                    }
+                    .tit{
+                        gap: 2.4rem;
+                        @include flexbox(row, flex-start, center);
+                        @include tablet{gap: 1.6rem;}
+                        strong{
+                            font-weight: bold;
+                            white-space: nowrap;
+                            &::before{
+                                content: '';
+                                width: 2.4rem;
+                                height: 2.4rem;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-right: 0.8rem;
+                                @include background(icon, bell_icon, png, no-repeat, contain, center, center);
+                                @include tablet{display: none;}
+                            }
+                        }
+                        .swiper-controls{
+                            position: relative;
+                            @include flexbox(row, flex-start, flex-start);
+                            @include tablet{display: none;}
+                            .swiper-button{
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                top: 0;
+                                margin-top: 0;
+                                position: static;
+                                &::after{display: none;}
+                                &-prev{@include background(icon, arrow_icon03, svg, no-repeat, contain, center, center);}
+                                &-next{@include background(icon, arrow_icon04, svg, no-repeat, contain, center, center);}
+                            }
+                        }
+                    }
+                    #noticeSwiper{
+                        .swiper-slide{
+                            @include ellipsis(1);
+                            @include tablet{font-size: 1.4rem;}
+                        }
+                    }
+                }
+                &.visual{
+                    margin-top: 3.2rem;
+                    #visualSwiper{
+                        .swiper-slide{
+                            > a{
+                                width: 100%;
+                                img{width: 100%;}
+                            }
+                        }
+                        .swiper-controls{
+                            width: 12rem;
+                            position: absolute;
+                            right: 6rem;
+                            bottom: 2.4rem;
+                            @include flexbox(row, space-between, center);
+                            @include tablet{
+                                bottom: auto;
+                                right: auto;
+                                top: 2.4rem;
+                                left: 2.4rem;
+                            }
+                            .swiper-pagination{
+                                position: static;
+                                width: 8rem;
+                                background: rgba($black, .8);
+                                border-radius: 3rem;
+                                padding: .4rem;
+                                text-align: center;
+                                color: $gray01;
+                                line-height: 1.2;
+                                .swiper-pagination-current{
+                                    font-weight: bold;
+                                    color: $white;
+                                }
+                            }
+                            .swiper-button{
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                top: 0;
+                                margin-top: 0;
+                                position: static;
+                                filter: invert(100%) sepia(97%) saturate(23%) hue-rotate(56deg) brightness(100%) contrast(91%);
+                                &::after{display: none;}
+                                &-prev{@include background(icon, arrow_icon03, svg, no-repeat, contain, center, center);}
+                                &-next{@include background(icon, arrow_icon04, svg, no-repeat, contain, center, center);}
+                                @include tablet{display: none;}
+                            }
+                        }
+                    }
+                }
+                &.product{
+                    @include background(main, product_bg, png, no-repeat, contain, center, center);
+                    .tit{
+                        width: calc(100% / 3 - 1.6rem);
+                        text-align: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        @include notebook{
+                            width: 100%;
+                            position: static;
+                            transform: translate(0);
+                        }
+                        strong{
+                            font-size: 2.8rem;
+                            position: relative;
+                            @include notebook{
+                                display: inline-block;
+                                font-size: 2rem;
+                            }
+                            &::before, &::after{
+                                content: '';
+                                width: 6.4rem;
+                                height: 5.2rem;
+                                display: block;
+                                @include background(icon, pd_object_icon, png, no-repeat, contain, center, center);
+                                @include notebook{
+                                    // position: absolute;
+                                    width: 4rem;
+                                    height: 3.4rem;
+                                }
+                            }
+                            &::before{
+                                @include notebook{margin-left: -4rem;}
+                            }
+                            &::after{
+                                transform: rotate(180deg);
+                                margin-left: auto;
+                                @include notebook{margin-right: -4rem;}
+                            }
+                            span{
+                                display: block;
+                                margin-top: 1.4rem;
+                                font-size: 4.8rem;
+                                font-weight: bold;
+                                color: $mainColor;
+                                @include notebook{
+                                    margin-top: 0.8rem;
+                                    font-size: 3.2rem;
+                                }
+                            }
+                        }
+                    }
+                    .product-cont{
+                        @include notebook{margin-top: 2.4rem;}
+                        .product-wrap{
+                            border-radius: 1rem;
+                            overflow: hidden;
+                            position: relative;
+                            background: $white;
+                            @include border(1px, $gray04);
+                            &:hover{
+                                &::after{opacity: 1;}
+                                .order{
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                            &::after{
+                                content: '';
+                                width: 100%;
+                                height: 100%;
+                                background: rgba($black, .3);
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 0;
+                                opacity: 0;
+                                transition: opacity .2s;
+                            }
+                            .product-img{
+                                background: #F8F8F8;
+                                padding: 1rem;
+                                min-height: 21.4rem;
+                                @include flexbox(row, center,center);
+                                img{max-width: 100%;}
+                            }
+                            .product-info{
+                                padding: 1rem 2rem;
+                                line-height: 1.4;
+                                span{
+                                    font-size: 1.4rem;
+                                    color: $darkgray;
+                                    @include ellipsis(1);
+                                }
+                                strong{
+                                    display: block;
+                                    font-size: 2rem;
+                                    font-weight: bold;
+                                    @include ellipsis(1);
+                                }
+                            }
+                            .order{
+                                opacity: 0;
+                                visibility: hidden;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                z-index: 1;
+                                transform: translate(-50%, -50%);
+                                transition: all .2s;
+                                @include flexbox(row, center, center);
+                                .btn-wrap{gap: 2.4rem;}
+                            }
+                        }
+                        .product-list{
+                            gap: 1.6rem;
+                            flex-wrap: wrap;
+                            @include flexbox(row, space-between, flex-start);
+                            @include notebook{display: none;}
+                            > li{
+                                width: calc(100% / 3 - 1.6rem);
+                                &.none{
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+                            }
+                        }
+                        #productSwiper{
+                            display: none;
+                            @include notebook{display: block;}
+                            .swiper-controls{
+                                margin-top: 2.4rem;
+                                .swiper-pagination{
+                                    position: static;
+                                    &-bullet{
+                                        width: 2.4rem;
+                                        height: 0.4rem;
+                                        opacity: 1;
+                                        border-radius: 10%;
+                                        background: #C8CDD6;
+                                        &-active{
+                                            background: #4B5D7B;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.bp{
+                    @include notebook{
+                        padding-top: 6.5rem;
+                    }
+                    &::after{
+                        content: '';
+                        width: 50%;
+                        height: 21rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        @include background(main, bp_object, png, no-repeat, contain, center, center);
+                        @include notebook{
+                            width: 60%;
+                            height: 9.2rem;
+                            right: -2rem;
+                            top: 0;
+                        }
+                    }
+                    .tit{
+                        strong{
+                            font-size: 4.4rem;
+                            font-weight: bold;
+                            position: relative;
+                            @include notebook{font-size: 2.8rem;}
+                            &::after{
+                                content: '';
+                                width: 25.6rem;
+                                height: 1rem;
+                                position: absolute;
+                                right: -4.2rem;
+                                bottom: .5rem;
+                                z-index: -1;
+                                @include background(main, bp_tit_object, png, no-repeat, contain, top, left);
+                                @include notebook{width: 18rem;}
+                            }
+                        }
+                    }
+                    .con-wrap{
+                        .bp-list{
+                            gap: 1.6rem;
+                            @include flexbox(row, space-between, flex-start);
+                            @include notebook{
+                                margin-top: 2rem;
+                                flex-direction: column;
+                            }
+                            > li{
+                                margin-top: 10rem;
+                                width: calc(100% / 6 - 1.6rem);
+                                position: relative;
+                                transition: all .35s;
+                                @include notebook{
+                                    width: 100%;
+                                    margin-top: 0;
+                                }
+                                > a{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                &.on{
+                                    width: calc((100% / 6 - .8rem) * 2);
+                                    @include notebook{
+                                        width: 100%;
+                                        margin-top: 5rem;
+                                    }
+                                    .bp-num{
+                                        font-size: 8rem;
+                                        color: #F47B7F;
+                                        -webkit-text-stroke: 0;
+                                        @include notebook{
+                                            margin-top: 5rem;
+                                            font-size: 6rem;
+                                            bottom: 98%;
+                                            right: 0;
+                                            top: auto;
+                                            left: auto;
+                                            transform: translate(0)
+                                        }
+                                    }
+                                    .bp-cont{
+                                        @include border(1px, $gray04);
+                                        @include notebook{height: 33.4rem;}
+                                        .bp-img{
+                                            height: 75%;
+                                            &::after{opacity: 0;}
+                                        }
+                                        .bp-info{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                                .bp-num{
+                                    font-family: $play;
+                                    font-size: 6rem;
+                                    font-weight: bold;
+                                    text-align: right;
+                                    position: absolute;
+                                    bottom: 98%;
+                                    right: 0;
+                                    color: transparent;
+                                    -webkit-text-stroke: 1px #0C364C;
+                                    @include notebook{
+                                        right: auto;
+                                        bottom: auto;
+                                        top: 50%;
+                                        left: 50%;
+                                        z-index: 9;
+                                        transform: translate(-50%, -50%);
+                                        -webkit-text-stroke: 1px $white;
+                                    }
+                                }
+                                .bp-cont{
+                                    width: 100%;
+                                    height: 58.2rem;
+                                    border-radius: 1rem;
+                                    overflow: hidden;
+                                    box-shadow: $boxshadow;
+                                    position: relative;
+                                    z-index: 1;
+                                    @include notebook{
+                                        height: 14rem;
+                                        box-shadow: none;
+                                        border: 0;
+                                    }
+                                    .bp-img{
+                                        width: 100%;
+                                        height: 100%;
+                                        position: relative;
+                                        &::after{
+                                            content: '';
+                                            width: 100%;
+                                            height: 100%;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            opacity: 1;
+                                            background: rgba($black, .5);
+                                            transition: opacity .35s;
+                                        }
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            @include tablet{object-position: center center;}
+                                        }
+                                    }
+                                    .bp-info{
+                                        height: 20%;
+                                        padding: 2.8rem 2.4rem;
+                                        background: $white;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: all .2s;
+                                        @include notebook{
+                                            height: 25%;
+                                            background: none;
+                                            padding: 1.6rem .8rem;
+                                        }
+                                        span{
+                                            font-size: 1.8rem;
+                                            color: $darkgray;
+                                            @include notebook{font-size: 1.6rem;}
+                                        }
+                                        strong{
+                                            margin-top: 2rem;
+                                            display: block;
+                                            font-size: 2.8rem;
+                                            font-weight: bold;
+                                            @include notebook{
+                                                margin-top: 1rem;
+                                                font-size: 2rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// product
+.test{
+    // 제품리스트
+    .product-list {
+        width: calc(100% - 4rem);
+        max-width: 1364px;
+        margin: 0 auto;
+        @include flexbox(row, flex-start, flex-start);
+        gap: 2.4rem;
+        @include tablet {
+        @include flexbox(column, flex-start, center);
+        }
+        .main-img {
+            width: 50%;
+            height: 28rem;
+            padding: 3.2rem;
+            background: $white;
+            border-radius: 4px;
+            border: 1px solid $gray04;
+            box-shadow: 5px 5px 0 0 #f5f5f5;
+            @include flexbox(row, center, center);
+            @include tablet {
+                width: 100%;
+            }
+            @include mobile {
+                height: 14.6rem;
+                padding: 1.6rem;
+            }
+            img {
+                max-width: 100%;
+                // width: 100%;
+                // height: 100%;
+                // object-fit: contain;
+                @include mobile {
+                    max-height: 100%;
+                }
+            }
+        }
+        .detail-info {
+            width: 50%;
+            padding-right: 5.8rem;
+            @include flexbox(column, center, flex-start);
+            @include tablet {
+                width: 100%;
+                padding-right: 0;
+            }
+            .title {
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 3rem;
+                @include mobile {
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+                &.detail {
+                    color: $mainColor;
+                }
+            }
+            .series-details {
+                width: 100%;
+                margin: 1.4rem 0 2.4rem;
+                @include flexbox(row, flex-start ,center);
+                gap: .8rem;
+                li {
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    img {width: 100%;}
+                }
+            }
+            span {
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 2.1rem;
+            }
+            p {
+                margin-top: 0.8rem;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 1.8rem;
+                color: $darkgray;
+            }
+        }
+    }
+    // 회원정보
+    .member-info {
+        width: calc(100% - 4rem);
+        max-width: 1364px;
+        margin: 0 auto;
+        .table-wrap {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid $gray03;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            ul {
+                width: 100%;
+                @include flexbox(row, flex-start, flex-start);
+                flex-wrap: wrap;
+                @include notebook {
+                    @include flexbox(column, flex-start, flex-start);
+                    flex-wrap: nowrap;
+                }
+                li {
+                    width: 50%;
+                    height: 6.4rem;
+                    @include flexbox(row, flex-start, flex-start);
+                    &:not(:nth-last-of-type(1),:nth-last-of-type(2)) {
+                        border-bottom: 1px solid $gray03;
+                    }
+                    &:nth-child(odd) {
+                        border-right: 1px solid $gray03;
+                    }
+                    @include notebook {
+                        width: 100%;
+                        &:not(:nth-last-of-type(1)) {
+                            border-bottom: 1px solid $gray03;
+                        }
+                        &:nth-child(odd) {
+                            border-right: none;
+                        }
+                    }
+                    @include tablet {
+                        @include flexbox(column, flex-start, flex-start);
+                        padding: 1.4rem;
+                        height: auto;
+                    }
+                    div {
+                        @include flexbox(row, flex-start, center);
+                    }
+                    .title {
+                        width: 18rem;
+                        height: 100%;
+                        @include flexbox(row, center, center);
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 1.8rem;
+                        border-right: 1px solid $gray03;
+                        @include tablet {
+                            width: 100%;
+                            @include flexbox(row, flex-start, flex-start);
+                            border-right: none;
+                            margin-bottom: 0.8rem;
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                        }
+                    }
+                    .contents {
+                        position: relative;
+                        width: calc(100% - 18rem);
+                        height: 100%;
+                        padding: 1.5rem 2.5rem 1.4rem;
+                        @include tablet {
+                            width: 100%;
+                            padding: 0;
+                        }
+                        &.type02 {
+                            input {
+                                max-width: 14rem;
+                                width: 50%;
+                                @include tablet {
+                                    max-width: 100%;
+                                }
+                            }
+                            span {
+                                text-align: center;
+                                width: 2.4rem;
+                            }
+                            select {
+                                max-width: 14rem;
+                                width: 50%;
+                                @include tablet {
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                        input {
+                            max-width: 30.5rem;
+                            width: 100%;
+                            @include tablet {
+                                max-width: 100%;
+                                max-height: 4rem;
+                                height: 4rem;
+                            }
+                        }
+                        .explain {
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            line-height: 1.8rem;
+                            color: $gray01;
+                            margin-left: 1.4rem;
+                            @include tablet {
+                                margin-left: 0;
+                                margin-top: 0.8rem;
+                                font-size: 1.2rem;
+                                line-height: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &.type02 {
+                ul {
+                    @include flexbox(column, flex-start, flex-start);
+                    flex-wrap: nowrap;
+                    li {
+                        width: 100%;
+                        border-right: none;
+                        &:not(:last-of-type) {
+                            border-bottom: 1px solid $gray03;
+                        }
+                        // @include tablet {
+                        //     @include flexbox(column, flex-start, flex-start)
+                        // }
+                        .contents {
+                            @include tablet {
+                                @include flexbox(column, flex-start, flex-start);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 공지사항 notice
+.page-tit {
+    position: relative;
+    width: 100%;
+    height: 14.4rem;
+    @include background (common, page_title_bg, png, no-repeat, cover, center, center);
+    @include flexbox(row, center, center);
+    strong {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 4rem;
+    }
+}
+.cont-tit {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin-bottom: 2.4rem;
+    @include tablet {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        margin-bottom: 1.4rem;
+    }
+}
+.notice-detail {
+    .page-tit {
+        margin-bottom: 8.4rem;
+        .mb-prev-btn {
+            width: 1.6rem;
+            height: 1.6rem;
+            display: none;
+            position: absolute;
+            left: 2.4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            img {
+                width: 100%;
+            }
+        }
+        .mb-txt {
+            display: none;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+            color: $mainColor;
+        }
+        @include tablet {
+            height: 6rem;
+            margin-bottom: 2.4rem;
+            background: transparent;
+            border-bottom: 1px solid $gray04;
+            strong {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: $mainColor;
+            }
+            .mb-prev-btn {
+                display: block;
+            }
+            .mb-txt {
+                display: block;
+            }
+        }
+    }
+    .inner {
+        width: calc(100% - 4rem);
+        max-width: 1364px;
+        margin: 0 auto;
+        .cont-wrap {
+            .register-date {
+                width: 100%;
+                padding: 2.4rem 0 0;
+                border-top: 1px solid $gray04;
+                @include flexbox(row, flex-end, center);
+                span {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 1.8rem;
+                    color: $darkgray;
+                }
+            }
+            .cont-detail {
+                width: 100%;
+                min-height: 78.2rem;
+                padding: 4.8rem 2.4rem;
+                @include flexbox(column, flex-start, flex-start);
+                gap: 2.4rem;
+                @include tablet {
+                    padding: 4.4rem 0;
+                    min-height: auto;
+                }
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                }
+                .img-wrap {
+                    width: 100%;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+            .page-move {
+                width: 100%;
+                border-top: 1px solid $black;
+                border-bottom: 1px solid $black;
+                li {
+                    position: relative;
+                    width: 100%;
+                    padding: 1.3rem 1.7rem;
+                    @include flexbox(row, flex-start, center);
+                    &.prev {
+                        border-bottom: 1px solid $gray04;
+                        a {
+                            &::before {
+                                @include background(icon, arrow_icon06, png, no-repeat, contain, center, center);
+                            }
+                        }
+                        &.disabled {
+                            a {
+                                color: $gray02;
+                                cursor: default;
+                                &::before {
+                                    @include background(icon, arrow_icon05, png, no-repeat, contain, center, center);
+                                }
+                            }
+                        }
+                    }
+                    &.next {
+                        a {
+                            &::before {
+                                @include background(icon, arrow_icon08, png, no-repeat, contain, center, center);
+                            }
+                        }
+                        &.disabled {
+                            a {
+                                color: $gray02;
+                                cursor: default;
+                                &::before {
+                                    @include background(icon, arrow_icon07, png, no-repeat, contain, center, center);
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        line-height: 1.8rem;
+                        margin-left: 4rem;
+                        &::before {
+                            position: absolute;
+                            left: 1.7rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            content: '';
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-wrap {
+            width: 100%;
+            margin-top: 1.4rem;
+            @include flexbox(row, flex-end, center);
+            @include tablet {
+                @include flexbox(row, center, center);
+                margin-top: 4.4rem;
+            }
+        }
+    }
+}

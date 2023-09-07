@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한항공</title>
+    <!-- jquery cdn -->
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
+    <!-- datepicker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <!-- timepicker -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 로컬소스 -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/common.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!--content -->
+    <section class="main content">
+        <!-- header -->
+        <header>
+            <div class="inner">
+                <div class="lnb"> 
+                    <div class="btn-wrap">
+                        <button class="btn btn-icon btn-hamburger"></button>
+                    </div>
+                    <h2 class="head-text">
+                        OPS CORE <span class="">(가칭08.18기준)</span>
+                    </h2>
+                </div>
+                <div class="head-search-wrap rnb">              
+                    <div class="input-wrap head-search">
+                        <input type="search" placeholder="Search">
+                    </div>
+                    <div class="input-wrap">
+                        <button class="btn btn-icon btn-head-search" type="submit"></button>
+                    </div>
+                    <div class="input-wrap">
+                        <div class="dropdown" rel="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle">선택</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0)">test01</a></li>
+                                <li><a href="javascript:void(0)">test02</a></li>
+                                <li><a href="javascript:void(0)">test03</a></li>
+                                <li><a href="javascript:void(0)">test04</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- content container -->
+        <div class="container">
+            <div class="inner">
+                <div class="content-title-wrap">
+                    <h2>
+                        Role Management
+                    </h2>
+                    <ul class="location">
+                        <li>
+                            <a href="javascript:void:(0)">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void:(0)">Admin</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void:(0)">Role Management</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item-wrap">
+                    <div class="item-box item-box-side">
+                        <div class="search-wrap">                                
+                            <div class="input-wrap search">
+                                <input type="search" placeholder="Search">
+                                <button class="btn btn-icon btn-search" type="submit"></button>
+                            </div>
+                            <button class="btn btn-icon search-more-btn"></button>
+                        </div>
+                        <div class="side-list-wrap"> 
+                            <ul>
+                                <li class="on">
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Operation Manager
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            AC SKD
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Global ACS
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            SI Support
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            PRM Support
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Cockpit Crew Tracking
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Cabin Crew Tracking
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Maintenance Coordinator
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Flight Manager
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Flight Control
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void:(0)">
+                                        <span>
+                                            Flight Operation Manager
+                                        </span>
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item-box item-box-type01">
+                        <div class="item-con">
+                            <div class="item-title">
+                                <h3>
+                                    User Infomation
+                                </h3>
+                            </div>
+                            <div class="item-text-box">
+                                <p>Cargo SVC Coordinator</p>
+                            </div>
+                            <div class="item-text-box">
+                                <div class="input-wrap col-12">
+                                    <input type="text" class="col-12" placeholder="Cargo SVC Coordinator">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-con">
+                            <div class="item-title">
+                                <h3>
+                                    롤 권한
+                                </h3>
+                            </div>
+                            <div class="board-wrap">
+                                <div class="board-list">
+                                    <table class="table">
+                                        <caption>롤 권한</caption>
+                                        <!--
+                                        <colgroup>
+                                            <col width="20%">
+                                            <col width="auto">
+                                            <col width="10%">
+                                            <col width="10%">
+                                        </colgroup>
+                                        -->
+                                        <thead>
+                                            <tr>
+                                                <th class="col-2">
+                                                    <span>
+                                                        Menu ID
+                                                    </span>
+                                                </th>
+                                                <th class="col-auto">
+                                                    <span>
+                                                        Menu Name
+                                                    </span>
+                                                </th>
+                                                <th class="col-3">
+                                                    <span>
+                                                        접근 권한
+                                                    </span>
+                                                </th>
+                                                <th class="col-3">
+                                                    <span>
+                                                        수정 권한
+                                                    </span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        100
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Operation Manager
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-01">
+                                                        <label for="checkList01-01"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-01">
+                                                        <label for="checkList02-01"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        101
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        AC SKD
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-02" checked>
+                                                        <label for="checkList01-02"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-02" checked>
+                                                        <label for="checkList02-02"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>  
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td class="col-2">
+                                                    <span>
+                                                        102
+                                                    </span>
+                                                </td>
+                                                <td class="col-auto">
+                                                    <span title="값이 길어질 시 보이는 툴팁">
+                                                        Global ACS
+                                                    </span>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList01-03" disabled checked>
+                                                        <label for="checkList01-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="col-3">
+                                                    <div class="input-wrap checkbox">
+                                                        <input type="checkbox" id="checkList02-03" disabled>
+                                                        <label for="checkList02-03"></label>
+                                                    </div>
+                                                </td>
+                                            </tr> 
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="board-bottom">
+                                    <div class="btn-wrap flex-end">
+                                        <button class="btn btn-type03 btn-size-lg">
+                                            Delete
+                                        </button>
+                                        <button class="btn btn-type04 btn-size-lg">
+                                           Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//content-->
+
+    <!--chat-wrap -->
+    <section class="chat-wrap right-content">
+        <div class="inner">
+            <div class="chat-top">
+                <p>
+                    <b>
+                        Irops in Progress
+                    </b>
+                    <span class="text-red">1</span> / 2
+                </p>
+            </div>
+            <div class="chat-con">
+
+            </div>
+        </div>
+        
+    </section>
+    <!-- // chat-wrap -->
+</div>
+    
+
+  
+</body>
+</html>
