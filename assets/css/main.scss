@@ -9,25 +9,43 @@ Role Management
 }
 .user-infomation{
     @include flexbox(row, flex-start,flex-start);
-    min-height:7rem;
     background-color:$white;
-    padding:0 2.4rem; 
+    padding:2.4rem;
     margin-bottom:2.8rem;
+    &>div{
+       &:nth-child(1){
+            width:17.5rem;
+            border-right:1px solid $gray02;
+            min-height:24rem;
+            h3{
+                font-size:2.4rem;
+                line-height: 2.88rem;
+                color:$black0;
+                margin-bottom:1.6rem;
+            }
+            h4{
+                color:$mainColor;
+                font-size:1.8rem;
+                font-weight: 700;
+                line-height:2.16rem;
+            }
+        }
+       &:nth-child(2){
+            width:100%;
+            flex: 1;
+            padding-left:4.4rem;
+       } 
+    }
     &.text-box{
+        max-height:7rem;
         @include flexbox(row, flex-start,center);
         p{
             color:$black0;
             font-size:1.8rem;
             font-weight: 700;
         }
-    }
-    &>div{
-       &:nth-child(1){
-            width:17.4rem;
-            border-right:1px soild $gray02;
+        div.input-wrap{
+            width:100%;
         }
-       &:nth-child(2){
-            
-       } 
     }
 }

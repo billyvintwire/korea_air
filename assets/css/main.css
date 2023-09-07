@@ -1546,12 +1546,34 @@ Role Management
   -webkit-box-pack: start;
   -moz-box-justify-content: flex-start;
   justify-content: flex-start;
-  min-height: 7rem;
   background-color: #ffffff;
-  padding: 0 2.4rem;
+  padding: 2.4rem;
   margin-bottom: 2.8rem;
 }
+.user-infomation > div:nth-child(1) {
+  width: 17.5rem;
+  border-right: 1px solid #bbbbbb;
+  min-height: 24rem;
+}
+.user-infomation > div:nth-child(1) h3 {
+  font-size: 2.4rem;
+  line-height: 2.88rem;
+  color: #000;
+  margin-bottom: 1.6rem;
+}
+.user-infomation > div:nth-child(1) h4 {
+  color: #0063A5;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.16rem;
+}
+.user-infomation > div:nth-child(2) {
+  width: 100%;
+  flex: 1;
+  padding-left: 4.4rem;
+}
 .user-infomation.text-box {
+  max-height: 7rem;
   display: flex;
   -moz-flex-direction: row;
   flex-direction: row;
@@ -1566,7 +1588,6 @@ Role Management
   font-size: 1.8rem;
   font-weight: 700;
 }
-.user-infomation > div:nth-child(1) {
-  width: 17.4rem;
-  border-right: 1px soild #bbbbbb;
+.user-infomation.text-box div.input-wrap {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
