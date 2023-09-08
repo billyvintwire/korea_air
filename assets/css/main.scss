@@ -12,8 +12,11 @@ Role Management
     background-color:$white;
     padding:2.4rem;
     margin-bottom:2.8rem;
+    &:last-child{
+        margin-bottom:0;
+    }
     &>div{
-       &:nth-child(1){
+       &.user-name{
             width:17.5rem;
             border-right:1px solid $gray02;
             min-height:24rem;
@@ -30,14 +33,36 @@ Role Management
                 line-height:2.16rem;
             }
         }
-       &:nth-child(2){
+       &.user-info{
             width:100%;
             flex: 1;
             padding-left:4.4rem;
+            ul{
+                li{
+                    margin-bottom:2.4rem;
+                    p{
+                        font-size:1.4rem;
+                        font-weight: 400;
+                        line-height:1.68rem;
+                        color:$darkgray;
+                        margin-bottom:1.6rem;
+                    }
+                    span{
+                        font-size:1.6rem;
+                        font-weight: 700;
+                        line-height:1.92rem;
+                        color:$black0; 
+                    }
+                }
+            }
        } 
     }
     &.text-box{
         max-height:7rem;
+        div:nth-child(1){
+            border-right:0;
+            min-height:auto;
+        }
         @include flexbox(row, flex-start,center);
         p{
             color:$black0;

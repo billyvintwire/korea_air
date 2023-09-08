@@ -228,10 +228,11 @@ h5{font-weight: 400;font-size:1.2rem;line-height:1.4rem}
 	text-decoration: none;
 	padding: 0 3rem 0 1rem;
 	width: 100%;
-	height: 4rem;
+	height: 3.2rem;
 	font-size: 1.4rem;
 	border: 1px solid #CCCCCC;
 	color: #141414;
+    cursor: pointer;
 }
 .dropdown .dropdown-toggle.disabled {
     color: #B1B1B1;
@@ -761,6 +762,9 @@ button,
 }
 .board-list{
     margin-bottom:1.6rem;
+    position:relative;
+    overflow-y:auto;
+    max-height:53rem;
 }
 .board-bottom + .board-list {
     margin-bottom:0;
@@ -780,11 +784,15 @@ button,
             th{
                 background-color:$graybg;
                 padding-bottom:1.1rem;
+                position:sticky;
+                top:0;
+                z-index: 10;
                 span{
                     @include flexbox(row, center, center);
-
                     background-color: $blue02;
                     width:100%;height:3rem;
+                    line-height: 3rem;
+                    padding:0.6rem 0;
                     color:$black;
                     font-size:1.4rem;
                     font-weight: 400;
@@ -832,6 +840,7 @@ button,
 .col-10{width:83.33333333333333%;}
 .col-11{width:91.66666666666667%;}
 .col-12{width:100%;}
+
 
 .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
     

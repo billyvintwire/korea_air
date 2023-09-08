@@ -1,10 +1,10 @@
 /* 공통 레이아웃 */
 body{
-    
+    overflow: hidden;
 }
 .wrap{
     width:100%;
-    @include flexbox(row, flex-start,flex-start);
+    @include flexbox(row, flex-start,flex-start); 
     background-color: #fff;
 }
 .inner{
@@ -12,7 +12,7 @@ body{
     padding:0 2rem;
     margin:0 auto;
 }
-.content{
+.content{ 
     width:calc(100% - 46.5rem);
     flex-shrink: 0;
     min-height:calc(100vh - 6.4rem);
@@ -30,10 +30,12 @@ body{
     @include flexbox(row, flex-start,flex-start);
     .item-box{
         background-color:$graybg;
-        min-height:calc(100vh - 19rem);
-        max-height:calc(100vh - 19rem);
         flex: 2;
         overflow-y: auto;
+        &.item-row-01{
+            min-height:calc(100vh - 19rem);
+            max-height:calc(100vh - 19rem);
+        }
         &.pad-tb-20{
             padding-top:2rem;
             padding-bottom:2rem;
@@ -48,6 +50,12 @@ body{
         }
         &.item-box-type01{
             padding:1.6rem 2.4rem;
+        }
+        .item-con{
+            margin-bottom:2.8rem;
+            &:last-child{
+                margin-bottom:0;
+            }
         }
     }   
 }
@@ -183,12 +191,15 @@ header{
             .dropdown-toggle{
                 max-height: 2rem;
                 font-size: 1.4rem;
-                padding-left:1rem;
+                padding:0 2.4rem 0 1rem;
                 border-radius: 0;
                 background: $white;
                 border:0;
                 color:$mainColor;
-                @include background(icon, head_search_select_icon, svg, no-repeat, contain, center, right );
+                &::after{
+                    right:0;
+                    @include background(icon, head_search_select_icon, svg, no-repeat, contain, center, right );
+                }
             }
             &:focus{
                 outline: 0;

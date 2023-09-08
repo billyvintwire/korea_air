@@ -261,10 +261,11 @@ h5 {
   text-decoration: none;
   padding: 0 3rem 0 1rem;
   width: 100%;
-  height: 4rem;
+  height: 3.2rem;
   font-size: 1.4rem;
   border: 1px solid #CCCCCC;
   color: #141414;
+  cursor: pointer;
 }
 
 .dropdown .dropdown-toggle.disabled {
@@ -900,6 +901,9 @@ button.modify::before,
 
 .board-list {
   margin-bottom: 1.6rem;
+  position: relative;
+  overflow-y: auto;
+  max-height: 53rem;
 }
 
 .board-bottom + .board-list {
@@ -916,6 +920,9 @@ button.modify::before,
 .table thead tr th {
   background-color: #F3F4F8;
   padding-bottom: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .table thead tr th span {
   display: flex;
@@ -929,6 +936,8 @@ button.modify::before,
   background-color: #E0EEF8;
   width: 100%;
   height: 3rem;
+  line-height: 3rem;
+  padding: 0.6rem 0;
   color: #222222;
   font-size: 1.4rem;
   font-weight: 400;
@@ -1148,6 +1157,10 @@ button.modify::before,
 }
 */
 /* 공통 레이아웃 */
+body {
+  overflow: hidden;
+}
+
 .wrap {
   width: 100%;
   display: flex;
@@ -1196,10 +1209,12 @@ button.modify::before,
 }
 .item-wrap .item-box {
   background-color: #F3F4F8;
-  min-height: calc(100vh - 19rem);
-  max-height: calc(100vh - 19rem);
   flex: 2;
   overflow-y: auto;
+}
+.item-wrap .item-box.item-row-01 {
+  min-height: calc(100vh - 19rem);
+  max-height: calc(100vh - 19rem);
 }
 .item-wrap .item-box.pad-tb-20 {
   padding-top: 2rem;
@@ -1215,6 +1230,12 @@ button.modify::before,
 }
 .item-wrap .item-box.item-box-type01 {
   padding: 1.6rem 2.4rem;
+}
+.item-wrap .item-box .item-con {
+  margin-bottom: 2.8rem;
+}
+.item-wrap .item-box .item-con:last-child {
+  margin-bottom: 0;
 }
 
 .item-title {
@@ -1386,11 +1407,14 @@ header .head-search-wrap .dropdown {
 header .head-search-wrap .dropdown .dropdown-toggle {
   max-height: 2rem;
   font-size: 1.4rem;
-  padding-left: 1rem;
+  padding: 0 2.4rem 0 1rem;
   border-radius: 0;
   background: #ffffff;
   border: 0;
   color: #0063A5;
+}
+header .head-search-wrap .dropdown .dropdown-toggle::after {
+  right: 0;
   background-image: url(../images/icon/head_search_select_icon.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1550,27 +1574,46 @@ Role Management
   padding: 2.4rem;
   margin-bottom: 2.8rem;
 }
-.user-infomation > div:nth-child(1) {
+.user-infomation:last-child {
+  margin-bottom: 0;
+}
+.user-infomation > div.user-name {
   width: 17.5rem;
   border-right: 1px solid #bbbbbb;
   min-height: 24rem;
 }
-.user-infomation > div:nth-child(1) h3 {
+.user-infomation > div.user-name h3 {
   font-size: 2.4rem;
   line-height: 2.88rem;
   color: #000;
   margin-bottom: 1.6rem;
 }
-.user-infomation > div:nth-child(1) h4 {
+.user-infomation > div.user-name h4 {
   color: #0063A5;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.16rem;
 }
-.user-infomation > div:nth-child(2) {
+.user-infomation > div.user-info {
   width: 100%;
   flex: 1;
   padding-left: 4.4rem;
+}
+.user-infomation > div.user-info ul li {
+  margin-bottom: 2.4rem;
+}
+.user-infomation > div.user-info ul li p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.68rem;
+  color: #666666;
+  margin-bottom: 1.6rem;
+}
+.user-infomation > div.user-info ul li span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.92rem;
+  color: #000;
 }
 .user-infomation.text-box {
   max-height: 7rem;
@@ -1582,6 +1625,10 @@ Role Management
   -webkit-box-pack: start;
   -moz-box-justify-content: flex-start;
   justify-content: flex-start;
+}
+.user-infomation.text-box div:nth-child(1) {
+  border-right: 0;
+  min-height: auto;
 }
 .user-infomation.text-box p {
   color: #000;
